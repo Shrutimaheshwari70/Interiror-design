@@ -1,0 +1,2429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Interior!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #main{
+            /* min-height: 100%; */
+            /* width: 100%; */
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        #box-1{
+            display: flex;
+        }
+        #left-1{
+            height: 100vh;
+            width: 60vw;
+            background-color: #275A53;  
+        }
+        #right-1{
+            height: 100vh;
+            width:40vw;
+            background-color: #F6F0E4;
+        }
+        #navbar{
+            display: flex;
+        }
+        #navbar img{
+            height: 7vh;
+            width: 3vw;
+            margin-top: 0.8vw;
+            margin-left: 3vw;
+        }
+        #navbar h1{
+            color: white;
+            font-size: 1.2em;
+            margin-top: 2vw;
+        }
+        #nav-right{
+            display: flex;
+            color: white;
+            margin-left: 27vw;
+            margin-top: -3.2vw;
+        }
+        #nav-right h1{
+            font-size: 1em;
+            margin: 1vw;
+            transition: all ease 0.3s;
+        }
+        #nav-right h1:hover{
+            text-decoration:underline;
+            color: rgb(205, 158, 173);        
+        }
+        #center1text{
+            margin-top: 5vw;
+            margin-left: 4vw;
+        }
+        #center1text h1 span{
+            color: #DDB142;
+            font-weight: bold;
+        }
+        #center1text h1{
+            color: white;
+            font-weight: bold;
+        }   
+        #center1text p{
+            color: white;
+            margin-top: 2vw;
+        }
+        #explore{
+            padding: 0.8vw 2.5vw;
+            border: none;
+            background-color: #DDB142;
+            color: white;
+            margin-top: 5vw;
+            transition: all ease 1s;
+        }
+        #explore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #arrow1{
+            background-color: white;
+            border: none;
+            padding: 0.7vw 0.7vw;
+            margin-left: -2.4vw;
+            transition: all ease 1s;
+        }
+        #arrow1:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #pic{
+            display: flex;
+            margin-left: 9vw;
+        }
+        #right-1{
+            color: gray;
+        }
+        #right-1 h1{
+            font-size: 1.3em;
+            margin-left: 30vw;
+            margin-top: 1.4vw;
+            font-weight: bold;
+        }
+        #custom-box{
+            height: 22vh;
+            width: 12vw;
+            background-color: lightblue;
+            margin-left: 22vw;
+            margin-top: 5vw;
+        }
+        #imgcenter img{
+            height: 60vh;
+            width: 55vw;
+            margin-left: -24vw;
+            margin-top: -8vw;
+            object-fit: cover;
+        }
+        #Watch{
+            padding: 0.9vw 2vw;
+            border: none;
+            background-color: white;
+            margin-left: 20vw;
+            margin-top: -3vw;
+            transition: all ease 2s;
+        }
+        #Watch:hover{
+            background-color: #000000;
+            color: #275A53;
+            padding: 1vw 2.5vw;
+        }
+        #play{
+            padding: 0.4vw 0.9vw 0.7vw;
+            border: none;
+            background-color: #DDB142;
+            font-size: 2.2vw;
+            margin-top: -3vw;
+            color: white;
+            transition: all ease 2s;
+        }
+        #play:hover{
+            color: #DDB142;
+            background-color: #ffffff;
+            transform: scale(1.1);
+        }
+        #box-2{
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+            height: 100vh;
+            width: 100vw;
+        }
+        #left1{
+            height: 100vh;
+            width: 50%;
+            background-color: #F4F4F4;
+        }
+        #right1{
+            height: 100vh;
+            width:50%;
+            background-color: #F4F4F4;
+        }
+        .pic{
+            display: flex;
+        }
+        .pic1 img{
+            height: 81vh;
+            width: 23vw;
+            padding-top: 6vw;
+            margin-left: 2vw;
+            /* transition: background-image 0.3s ease-in-out; */
+        }
+        .pic2 img{
+            height: 56vh;
+            width: 46vh;
+            padding-top: 6vw;
+            padding-left: 2vw;
+        }
+        .comment-box {
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 450px;
+            border: none;
+            position: relative;
+            background-color: white;
+            margin-left: 20vw;
+            margin-top: -10vw;
+        }
+        .left-line {
+            width: 10px;
+            height: 100%;
+            background-color: #4CAF50;
+            margin-right: 10px;
+        }
+        .comment-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .comment-text {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .comment-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: -16px;
+        }
+        .comment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .rating-stars {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: -1vw;
+            margin-left: 15vw;
+        }
+       .rating-stars span {
+            font-size: 23px;
+            color: gold;
+        }
+        .review-count {
+            font-size: 14px;
+            color: #555;
+            margin-left: 15vw;
+        }
+        #right1 h1{
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-top: 8vw;
+            margin-left: 6vw;
+            line-height: 4vw;        }
+        #right1 h1 span{
+            color: rgb(0, 109, 113);
+        }
+        #right1 p{
+            width: 38vw;
+            margin-left: 6vw;
+            margin-top: 2vw;
+            line-height: 2vw;
+            font-family: arial;
+            font-weight: 100;
+            color: rgb(177, 177, 177);
+        }  
+        #right1 h2{
+            font-size: 1.2em;
+            margin-left: 6vw;
+            color: rgb(74, 74, 74);
+            margin-top: 3.5vw;
+        }
+        #Readmore{
+            padding: 0.6vw 3vw 1vw;
+            /* border: none; */
+            margin-left: 6vw;
+            margin-top: 1.3vw;
+            font-size: 1.1em;
+            background-color:#DDB142;
+            border: none;
+            transition: all ease 0.2s;
+        }
+        #Readmore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer; 
+        }
+        #arrow{
+            padding: 0vw 0.4vw 0.7vw;
+            margin-left: -2.5vw;
+            font-size: 1.5em;
+            border: none;
+            transition: all ease 1s;
+
+        }
+        #arrow:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #box-3{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        #left2{
+            height: 100vh;
+            width: 35vw;
+            background-color:  #F4F4F4;
+        }
+        #left2 h1{
+            color: #275A53 ;
+            font-family: arial;
+            font-size: 2.5em;
+            font-weight: bold;
+            padding-left: 4vw;
+            padding-top: 12vw;
+        }
+        #left2 h3{
+            font-size: 2.5em;
+            font-weight: bold;
+            font-family: arial;
+            padding-left: 4vw;
+        }
+        #left2 p{
+            width: 26vw;
+            padding-top: 3vw;
+            line-height: 2vw;
+            font-family: arial;
+            font-size: 1em;
+            color: rgb(177, 177, 177);
+            padding-left: 4vw;
+        }
+        #right2{
+            height: 100vh;
+            width: 70vw;
+            background-color:  #F4F4F4;
+        }
+        .Exploremore{
+            padding: 0.6vw 3vw 1vw;
+            border: none;
+            margin-left: 4vw;
+            margin-top: 1.3vw;
+            font-size: 1.1em;
+            background-color:#DDB142;
+            border: none;
+            transition: all ease 1s;
+        }
+        .Exploremore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        .arrow1{
+            padding: 0 0.1vw 0.7vw 0.9vw;
+            margin-left: -2.7vw;
+            font-size: 1.5em;
+            border: none;
+            transition: all ease 1s;
+        }
+        .arrow1:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #right2{
+            display: flex;
+        }
+        .commercial img{
+            height: 70vh;
+            width: 23vw;
+            margin-top: 7vw;
+            margin-left: 1vw;
+        }
+        .residential img{
+            height: 53vh;
+            margin-top: 11vw;
+            width: 19vw;
+            transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+        }
+        .residential img:hover{
+            transform: scale(1.1) rotate(-5deg); /* Slight zoom and rotation */
+            filter: sepia(80%) contrast(120%) brightness(90%); /* Vintage effect */
+            opacity: 0.9; /* Slight fading */  
+        }
+        .kitchen img{
+            height: 53vh;
+            width: 19vw;
+            margin-top: 11vw;
+            transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+        }
+        .kitchen img:hover{
+            transform: scale(1.1) rotate(-5deg); /* Slight zoom and rotation */
+            filter: sepia(80%) contrast(120%) brightness(90%); /* Vintage effect */
+            opacity: 0.9; /* Slight fading */  
+        }
+        .commercial h1{
+            margin-top: -7vw;
+            color: white;
+            margin-left: 3vw;
+            font-size: 2em;
+        }
+        .commercial h2{
+            color: white;
+            font-size: 1.2em;
+            margin-left: 3vw;
+        }
+        .residential h1{
+            color: white;
+            margin-top: -6vw;
+            font-size: 2em;
+            margin-left: 2vw;
+        }
+        .residential h2{
+            color: white;
+            font-size: 1.2em;
+            margin-left: 2vw;
+        }
+        .kitchen h1{
+            color: white;
+            font-size: 2em;
+            margin-left: 2vw;
+            margin-top: -6vw;
+        }
+        .kitchen h2{
+            color: white;
+            font-size: 1.2em;
+            margin-left: 2vw;
+        }
+        #custom-line1{
+            height: 0.6vh;
+            width: 18vw;
+            margin-left: -33vw;
+            background: linear-gradient(to right, rgb(238, 198, 0) 50% , rgb(216, 216, 216) 50%);
+            margin-top: 39vw;
+        }
+        #number{
+            color: rgb(202, 202, 202);
+            margin-top: 35.4vw;
+            font-weight: bold;
+            margin-left: 1vw;
+            font-size: 1.2em;
+            letter-spacing: 0.4vw;
+        }
+        #number span{
+            color: #2a766c;
+            font-size: 3em;
+            font-weight: normal;
+        }
+        #box-4{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        #left3{
+            height: 100vh;
+            width: 50vw;
+            background-color:#F4F4F4;
+        }
+        #up{
+            height: 90vh;
+            width: 50vw;
+            /* background-color: pink; */
+            margin-top: 3vw;
+        }
+        #up{
+            height: 60%;
+            width: 90%;
+            margin-left: 2vw;
+            margin-top: 1vw;
+            background-image: url(https://images.unsplash.com/photo-1613545325268-9265e1609167?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+            transition: all linear 0.2s;
+        }
+        #up:hover{
+            background-image: url(https://images.unsplash.com/photo-1619911004446-6d985c84ee64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvZmElMjBibGFjayUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+        #down{
+            height: 26vh;
+            width: 45vw;
+            background-color: rgb(255, 255, 255);
+            /* box-shadow: 10px 2px 6px 7px  rgb(225, 225, 225); */
+            display: flex;
+            /* margin-top: -0vw; */
+            margin-left: 2vw;
+        }
+        #concept i{
+            font-size: 2.5em;
+            color: grey;
+            margin-left: 5vw;
+        }
+        #plan i{
+            font-size: 2.5em;
+            color: grey;
+            margin: 5vw;
+        }
+        #build i{
+            font-size: 2.5em;
+            color: grey;
+            margin: 5vw;
+        }
+        #design i{
+            font-size: 2.5em;
+            color: grey;
+        }
+        #launch i{
+            font-size: 2.5em;
+            color: rgb(219, 182, 0);
+        }
+        #concept  h1{
+            font-size: 1em;
+            margin-left: 4.5vw;
+        }
+        #plan h1{
+            font-size: 1em;
+            margin-left: 5.1vw;
+        }
+        #design h1{
+            font-size: 1em;
+            margin-left: -0.5vw;
+        }
+        #build h1{
+            font-size: 1em;
+            margin-left: 5vw;
+        }
+        #launch h1{
+            font-size: 1em;
+            margin-left: -0.2vw;
+        }
+        #line1{
+            height: 0.4vh;
+            width: 5.5vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: -30.7vw;
+            margin-top: 5vw;
+        }
+        #line2{
+            height: 0.4vh;
+            width: 5vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 2.45vw;
+            margin-top: 5vw;
+        }
+        #line3{
+            height: 0.4vh;
+            width: 5vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 2.5vw;
+            margin-top: 5vw;
+        }
+        #line4{
+            height: 0.4vh;
+            width: 5vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 2.4vw;
+            margin-top: 5vw;
+        }
+        #right3{
+            height: 100vh;
+            width: 50vw;
+            background-color: #F4F4F4;
+            padding-top: 5vw;
+            padding-left: 5vw;
+        }            
+        #right3 span{
+            color:#275A53;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        #right3 h1{
+            color: black;
+            font-weight: bold;
+        }
+        #circle1{
+            height: 6vh;
+            width: 6vh;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin-top: 4vw;
+        }
+        #num1{
+            font-size: 1.7em;
+            padding-left: 0.9vw;
+            padding-top: 0.2vw;
+        }
+        #circle2{
+            height: 6vh;
+            width: 6vh;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin-top: 2vw;
+        }
+        #num2{
+            font-size: 1.7em;
+            padding-left: 1vw;
+            margin-top: -2.7vw;
+        }
+        #circle3{
+            height: 6vh;
+            width: 6vh;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin-top: 2vw;
+        }
+        #num3{
+            font-size: 1.7em;
+            padding-left: 1vw;
+            padding-top: 0.3vw;
+        }
+        #text1 h1{
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: -2.5vw;
+            margin-left: 3.9vw;
+        }
+        #text2 h1{
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: -2.5vw;
+            margin-left: 3.9vw;
+        }
+        #text3 h1{
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: -2.5vw;
+            margin-left: 3.9vw;
+        }
+        #text1 p{
+            color: rgb(184, 184, 184);
+            font-weight: bold;
+            width: 28vw;
+            margin-left: 4vw;
+            margin-top: 1vw;
+            line-height: 1.6vw;
+        } 
+        #text2 p{
+            color: rgb(184, 184, 184);
+            font-weight: bold;
+            width: 28vw;
+            margin-left: 4vw;
+            margin-top: 1vw;
+            line-height: 1.6vw;
+        } 
+        #text3 p{
+            color:rgb(184, 184, 184);
+            font-weight: bold;
+            width: 28vw;
+            margin-left: 4vw;
+            margin-top: 1vw;
+            line-height: 1.6vw;
+        }
+        #box-5{
+            background-color: #F4F4F4;
+            height: 90vh;
+            width: 100vw;
+            display: flex;
+        }
+        #left5{
+            height: 100vh;
+            width: 30vw;
+            /* background-color: rebeccapurple; */
+        }
+        #left5 h1{
+            color: black;
+            font-size: 2.1em;
+            font-weight: bold;
+            padding-top: 4vw;
+            padding-left: 5vw;
+        }
+        #left5 span{
+            color: #275A53;
+        }
+        #left5 h2{
+            color: rgb(167, 167, 167);
+            font-size: 1.1em;
+            padding-left: 5vw;
+            padding-top: 1vw;
+        }
+        #right5{
+            height: 40vh;
+            width: 30vw;
+            margin-top: 4vw;
+            /* padding-left: -8vw; */
+            /* background-color: rgb(141, 17, 17); */
+            display: flex;
+        }
+        #img img{
+            height: 62vh;
+            width: 22vw; 
+            margin-top: 6vw;
+            margin-left: 1.3vw;
+            z-index: 2;
+        }
+        #right5{
+            height: 46vh;
+            width: 30vw;
+            background-color: rgba(128, 128, 128, 0.381);
+            /* z-index: 1; */
+            margin-left: 37vw;
+            margin-top: -1vw;
+        }
+        #img{
+            display: flex;
+            margin-top: -13vw;
+            margin-left: 30vw;
+        }
+        #box-6{
+            background-color: #F4F4F4;
+            height: 100vh;
+            width: 100vw;
+        }
+        #left6{
+            height: 100vh;
+            width: 35vw;
+            background-color:#F4F4F4;
+            padding-top: 6vw;
+            padding-left: 4vw;
+        }
+        #left6 h1{
+            color:#000000;
+            font-weight: bold;
+            font-size: 2.2em;
+        }
+        #left6 span{
+            color:#275A53;
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 3vw;
+        }
+        #left6 p{
+            width: 30vw;
+            color: rgb(179, 179, 179);
+            margin-top: 2vw;
+            font-weight: bold;
+            line-height: 2vw;
+        }
+        #left6 i{
+            font-size: 2em;
+            color: grey;
+        }
+        #left6 a{
+            font-size: 1em;
+            color: #2a766c;
+            font-weight: bold;
+        }
+        #right6{
+            height: 100vh;
+            width: 65vw;
+            background-color: red;
+        }
+        #right6{
+            height: 72vh;
+            margin-top:-55vw;
+            width: 53vw;
+            margin-left: 42.3vw;
+            background-image: url(https://images.unsplash.com/photo-1560448205-17d3a46c84de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDgwfHx8ZW58MHx8fHx8);
+            background-size: cover;
+            background-position: center;
+            transition: all linear 0.3s;
+        }
+        #right6:hover{
+            background-image: url(https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDYxfHx8ZW58MHx8fHx8);
+            background-size:cover ;
+            background-position: center;
+        }
+        .comment-section {
+            width: 30vw;
+            padding: 1.2vw;
+            border:none;
+            background-color: white;
+            margin-top: 34vw;
+            margin-left: -5vw;
+            position: absolute;
+        }
+        .comment-text p{
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-left: 0.5vw;
+            color: #333;
+            margin-bottom: 0.8vw;
+        }
+        .divider-line {
+            height: 0.1vh;
+            background-color: #ddd;
+            width: 12vw;
+            margin-top: -2.1vw;
+            margin-left: 7vw;
+        }
+        .play-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            color: #333; 
+        }
+        .play-button {
+            background-color:#275A53;
+            border: none;
+            color: white;
+            font-size: 20px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-top: -1.1vw;
+            margin-left: 18vw;
+        }
+        .comment-text span{
+            font-size: 1vw;
+            margin-left: 0.7vw;
+            color: grey;
+            line-height: 3vw;
+        }
+        #box-7{
+            height: 100vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+        }
+        #up-7{
+            height: 35vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+            padding-top: 2vw;
+            padding-left: 3vw;
+        }
+        #up-box{
+            height: 16vh;
+            width: 8vw;
+            background-color: #DDB142;
+        }
+        #up-box h1{
+            font-size: 12em;
+            color: white;
+            padding-top: 0.1vw;
+            padding-left: 1.6vw;
+        }
+        #up-box h2{
+            font-weight: bolder;
+            width: 40vw;
+            margin-top: -9.5vw;
+            margin-left: 6vw;
+            font-size: 2.5em;
+        }
+        #up-box h2:hover{
+            color: rgb(79, 47, 77);
+            transition:  all ease 0.2s;
+        }
+        #up-box h2 span{
+            color: #275A53; 
+        }
+        #arrow-left{
+            height: 3vw;
+            width: 3vw;
+            /* background-color: pink; */
+            border: 4px solid rgb(190, 190, 190);
+            margin-left: 81vw;
+            transition: all ease 0.2s;
+        }
+        #arrow-left:hover{
+            border: 4px solid rgb(112, 47, 34);
+            color: #275A53;
+        }
+        #arrow-left i{
+            font-size: 2em;
+            padding-left: 0.3vw;
+        }
+        #arrow-right{
+            height: 3vw;
+            width: 3vw;
+            /* background-color: pink; */
+            border: 4px solid rgb(190, 190, 190);
+            border-image: linear-gradient(to bottom, rgb(186, 186, 186) 50%, rgb(214, 200, 0) 60%)1;
+            position: absolute;
+            left: 90%;
+            margin-top: -3vw;
+            transition: all ease 0.1s;
+        }
+        #arrow-right:hover{
+            border: 4px solid rgb(112, 47, 34);
+            color: #275A53;
+        }
+        #arrow-right{
+            font-size: 2em;
+            padding-left: 0.3vw;
+        }
+        #down-7{
+            display: flex;
+            margin-top: 3vw;
+            margin-left: 1.5vw;
+        }
+        #comment7{
+            height: 35vh;
+            width: 28vw;
+            background-color:white;
+            margin-left: 3vw;
+        }
+        #left-line7{
+            height: 14vh;
+            width: 0.2vw;
+            background-color:#5d5d5d;
+            margin-left: 3vw;
+            margin-top: 1vw;
+        }
+        #textup7 h1{
+            font-size: 1em;
+            width: 20vw;
+            margin-left: 5vw;
+            margin-top: -7.1vw;
+            color: #a3a3a3;
+            line-height: 1.8vw;
+        }
+        #circle7{
+            height: 8vh;
+            width: 4vw;
+            background-color: red;
+            border-radius: 50%;
+            margin-left: 4vw;
+            margin-top: 1vw;
+            background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdpcmxzJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D);
+            background-size: cover;
+            background-position: center;
+        }
+        #textdown7 h1{
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -3.4vw;
+            margin-left: 9vw;
+        }
+        #textdown7 h2{
+            color: #a3a3a3;
+            font-size: 1em;
+            margin-left: 9vw;
+        }
+        #comment7:hover{
+            background-color:black;
+            transition: all ease 2s;
+        }
+        #comment-second7{
+            height: 35vh;
+            width: 28vw;
+            background-color:white;
+            margin-left: 3vw;
+        }
+        #left2line7{
+            height: 14vh;
+            width: 0.2vw;
+            background-color:#5d5d5d;
+            margin-left: 3vw;
+            margin-top: 1vw;
+        }
+        #text2up7 h1{
+            font-size: 1em;
+            width: 20vw;
+            margin-left: 5vw;
+            margin-top: -6.9vw;
+            color: #a3a3a3;
+            line-height: 1.8vw;
+        }
+        #circlesecond7{
+            height: 8vh;
+            width: 4vw;
+            background-color: red;
+            border-radius: 50%;
+            margin-left: 4vw;
+            margin-top: 1vw;
+            background-image: url(https://images.unsplash.com/photo-1724120505283-231de79bf9c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8);
+            background-size: cover;
+            background-position: center;
+        }
+        #text2down7 h1{
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -3.4vw;
+            margin-left: 9vw;
+        }
+        #text2down7 h2{
+            color: #a3a3a3;
+            font-size: 1em;
+            margin-left: 9vw;
+        }
+        #comment-second7:hover{
+            background-color: black;
+            transition: all ease 2s;
+        }
+        #comment-third7{
+            height: 35vh;
+            width: 28vw;
+            background-color:white;
+            margin-left: 3vw;
+        }
+        #left3line7{
+            height: 14vh;
+            width: 0.2vw;
+            background-color:#5d5d5d;
+            margin-left: 3vw;
+            margin-top: 1vw;
+        }
+        #text3up7 h1{
+            font-size: 1em;
+            width: 20vw;
+            margin-left: 5vw;
+            margin-top: -6.9vw;
+            color: #a3a3a3;
+            line-height: 1.8vw;
+        }
+        #circlethird7{
+            height: 8vh;
+            width: 4vw;
+            background-color: red;
+            border-radius: 50%;
+            margin-left: 4vw;
+            margin-top: 2.4vw;    
+            background-image: url(https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D);
+            background-size: cover;
+            background-position: center;
+        }
+        #text3down7 h1{
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -3.4vw;
+            margin-left: 9vw;
+        }
+        #text3down7 h2{
+            color: #a3a3a3;
+            font-size: 1em;
+            margin-left: 9vw;
+        }
+        #comment-third7:hover{
+            background-color: black;
+            transition: all ease 2s;
+        }
+        #box-8{
+            height: 80vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+            display: flex;
+        }
+        #left8{
+            height: 70vh;
+            width: 35vw;
+            margin-left: 0.8vw;            
+            background-image: url(https://images.unsplash.com/photo-1522156373667-4c7234bbd804?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D);
+            background-size: cover;
+            transition: all linear 1s;
+            background-position: center;
+            object-fit: cover;
+        }
+        #left8:hover{
+            background-image: url(https://images.unsplash.com/photo-1557374669-d1f478dc92c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDg2fHx8ZW58MHx8fHx8);
+            background-size: cover;
+            background-position: center;
+        }
+        #circle8{
+            height: 1vw;
+            width: 1vw;
+            border-radius: 50%;
+            background-color: #DDB142;
+            margin-top: -11.5vw;
+            margin-left: -7vw;
+            position: absolute;
+            z-index: 11;
+        }
+        #circle9{
+            height: 3vw;
+            width: 3vw;
+            border-radius: 50%;
+            background-color: #526F4E;
+            margin-top: -12.5vw;
+            margin-left: -8vw;
+            position: absolute;
+            z-index: 10;
+        }
+        #circle10{
+            height: 5vw;
+            width: 5vw;
+            border-radius: 50%;
+            background-color: #2f71688a;
+            margin-top: -13.5vw;
+            margin-left: -8.95vw;
+            position: absolute;
+            z-index: 9;
+        }
+        #right8{
+            height: 45vh;
+            width: calc(100% - 35vw);
+            background-color: #275A53;
+            margin-top:5.3vw;
+            padding-top: 5vw;
+            padding-left: 18vw;
+        }
+        #right8 a{
+            color: #e7e7e7b7;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        #right8 h1{
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            padding-top: 0.8vw;
+            line-height: 2.5vw;
+        }
+        #right8 input{
+            font-size: 1em;
+            height:6vh;
+            width: 20vw;
+            padding-left: 1vw;
+            margin-top: 1vw;
+        }
+        #right8 button{
+            background-color:#DDB142;
+            font-size: 1em;
+            padding: 0.7vw 2.5vw;
+            color: white;
+            border: none;
+            transition: all ease 0.2s;
+        }
+        #right8 button:hover{
+            background-color: #5d5d5d;
+            background-color:black;
+            color: white;
+            cursor: pointer;
+        }
+        #footer{
+            height: 50vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+        }
+        #text-footer{
+            display: flex;
+            margin-left: 5vw;
+        }
+        #company h1{
+            font-size: 1.3em;
+            color: #2a766c;
+            font-weight: bold;
+        }
+        #company h1:hover{
+            text-decoration: underline;
+        }
+        #company h2{
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+            line-height: 1.8vw;
+        }
+        #company h2:hover{
+            text-decoration: underline;
+        }
+        #company h3{
+            color: #ddb142ab;
+            margin-top: 2vw;
+        }
+        #company h3:hover{
+            text-decoration: underline;
+        }
+        #contacts h1{
+            font-size: 1.3em;
+            color: #2a766c;
+            font-weight: bold;
+            margin-left: 30vw;
+            margin-bottom: 2vw;
+        }
+        #contacts h1:hover{
+            text-decoration: underline;
+        }
+        #contacts h2{
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+            line-height: 1.8vw;
+            margin-left: 20vw;
+            text-align: right;
+        }
+        #contacts h2:hover{
+            text-decoration: underline;
+        }
+        #about h1{
+            font-size: 1.3em;
+            color: #2a766c;
+            font-weight: bold;
+            margin-left: 15vw;
+            margin-bottom: 2vw;
+        }
+        #about h1:hover{
+            text-decoration: underline;
+        }
+        #about h2{
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+            line-height: 1.8vw;
+            text-align: right;
+        }
+        #about h2:hover{
+            text-decoration: underline;
+        }
+        #catelogs h1{
+            font-size: 1.3em;
+            color: #2a766c;
+            font-weight: bold;
+            margin-left: 15vw;
+            margin-bottom: 2vw;
+        }
+        #catelogs h1:hover{
+            text-decoration: underline;
+        }
+        #catelogs h2{
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+            line-height: 1.8vw;
+            text-align: right;
+        }
+        #catelogs h2:hover{
+            text-decoration: underline;
+        }
+        #line-b{
+            height: 0.4vh;
+            width: 90%;
+            background-color: rgb(191, 191, 191);
+            margin-left: 4vw;
+            margin-top: 4vw;
+        }
+        #line-b img{
+            height: 7.5vh;
+            width: 4vw;
+            margin-top: 2vw;
+            margin-left: 3vw;
+        }
+        #line-b h1{
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-left: 7.5vw;
+            margin-top: -2.6vw;
+        }
+        #lineb-left{
+            height: 6.5vh;
+            width: 0.1vw;
+            background-color: #adadad;
+            margin-left: 17vw; 
+            margin-top: 2vw;
+        }
+        #lineb-left h1{
+            font-size: 1em;
+            width: 20vw;
+            padding-left: 2vw;
+            padding-top: 1vw;
+            color: rgb(89, 89, 89);
+        } 
+        #right-b{
+            display: flex;
+            margin-left: 52vw;
+            margin-top: -2.6vw;
+        }
+        #right-b h1{
+            font-size: 1.3em;
+            font-weight: bold;
+            color: rgb(89, 89, 89);
+            margin-left: 6vw;
+        }
+        @media (max-width: 640px) {
+        #box-1{
+            display: block;
+            flex-direction: column;
+        }
+        #left-1{
+            height: 50vh;
+            margin-top: -9vw;
+            width: 100vw;
+            padding-top: 9vw;
+            text-align: center;
+        }
+        #navbar{
+            display: none;
+        }
+        #nav-right{
+            display: none;
+        }
+        #center1text{
+            margin-top: 9vw;
+        }
+        #center1text h1{
+            font-size: 1.8em;
+            line-height: 8.5vw;
+        }
+        #center1text p{
+            font-size: 0.7em;
+            margin-top:4vw;
+        }
+        #explore{
+            width: 40vw;
+            height: 10vw;
+            margin-top: 5vw;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: left    ;
+            transition: all ease 1s;
+        }
+        #explore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #arrow1{
+            padding: 0.2vw 2.6vw 1.2vw 1.3vw;
+            margin-left: -9.4vw;
+            font-size: 1.3em;
+            transition: all ease 1s;
+        }
+        #arrow1:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;
+        }
+        #right-1{
+            height:55vh;
+            width:100vw;
+            padding-top: 5vw;
+        }
+        #right-1 h1{
+            font-size: 1em;
+            margin-left:75vw;
+        }
+        #custom-box{
+            height: 15vh;
+            width: 27vw;
+            margin-left: 65vw;
+            margin-top: 8vw;
+        }
+        #imgcenter img{
+            height: 28vh;
+            width: 80vw;
+            margin-left: 6vw;
+            margin-top: -20vw;
+        }
+        #Watch{
+            height: 4.5vh;
+            width: 26vw;
+            text-align: left;
+            font-size: 0.7em;
+            margin-left: 60vw;
+            font-weight: bold;
+            transition: all ease 2s;
+        }
+        #Watch:hover{
+            background-color: #000000;
+            color: #275A53;
+            transition: all ease 2s;
+            padding: 1vw 2.5vw;
+        }
+        #play{
+            padding: 0.4vw 1vw 1.4vw 1vw;
+            font-size: 5vw;
+            margin-left: -4vw;
+            transition: all ease 2s;
+        }
+        #play:hover{
+            color: #DDB142;
+            background-color: #ffffff;
+            transition: all ease 2s;
+            transform: scale(1.1);
+        }
+        #box-2{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        #left1{
+            height: 100vh;
+            width: 100vw;
+            background-color:#F4F4F4;
+            padding-top: 10vw;
+        }
+        .pic1 img{
+            height: 45vh;
+            width: 46vw;
+            margin-left: 3vw;
+        }
+        .pic2 img{
+            height: 31vh;
+            width: 27vh;
+        }
+        .comment-box {
+            width: 64vw;
+            margin-left: 33vw;
+            margin-top: -24vw;
+        }
+        .comment-text {
+            font-size: 0.5em;
+            margin-top: -2vw;
+            margin-left: -7vw;
+        }
+        .comment-image {
+            width: 8vw;
+            height: 4.5vh;
+            margin-left: -7vw;
+        }
+        .rating-stars {
+            margin-top: -5vw;
+            margin-left: 28vw;
+        }
+       .rating-stars span {
+            font-size: 1em;
+        }
+        .review-count {
+            font-size: 0.5em;
+            margin-left: 28vw;
+        }
+        #right1 {
+            background-color: #F4F4F4;
+            width: 100vw;
+            height: 100vh;
+            padding-top: -2vw;
+            text-align: center;
+        }
+        #right1 h1 {
+            font-size: 1.6em;
+            margin-top: 6vw;
+            /* margin-left: 5vw; */
+            line-height: 7vw;
+            font-weight: bold;
+        }
+        #right1 p  {
+            width: 87vw;
+            /* font-weight: bold; */
+            font-size: 0.7em;
+            line-height: 4vw;
+            padding-top: 4vw;
+        }  
+        #right1 h2{
+            font-size: 0.8em;
+        }
+        #Readmore{
+            height: 5.5vh;
+            width: 27vw;
+            text-align: left;
+            font-size:0.8em;
+            /* margin-top: -8vw; */
+            transition: all ease 0.2s;
+
+        }
+        #Readmore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer; 
+        }
+        #arrow{
+            font-size: 1em;
+            padding: 1.4vw 2vw 2.2vw;
+            margin-left: -6vw;
+            transition: all ease 1s;
+
+        }
+        #arrow:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;        }
+        #box-3{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        #left2{
+            height: 100vh;
+            width: 100vw;
+            padding-top: 6vw;
+            text-align: center;
+        }
+        #left2 h1{
+            font-size: 1.6em;
+            /* padding-left: 4vw; */
+        }
+        #left2 h3{
+            font-size: 1.6em;
+            /* padding-left: 4vw; */
+            margin-top: -2.5vw;
+        }
+        #left2 p{
+            width: 90vw;
+            padding-top: 2vw;
+            line-height: 4vw;
+            font-size: 0.7em;
+            padding-left: 16vw;
+        }
+        .Exploremore{
+            margin-left: 4vw;
+            height: 5.5vh;
+            width: 30vw;
+            text-align: left;
+            font-size:0.8em;
+            transition: all ease 1s;
+        }
+        .Exploremore:hover{
+            background-color: rgba(0, 0, 0, 0.51);
+            color:palegoldenrod;
+            cursor: pointer;
+            transition: all ease 1s;
+        }
+        .arrow1{
+            font-size: 1em;
+            padding: 1.4vw 2vw 2.2vw;
+            margin-left: -6vw;
+            transition: all ease 1s;
+        }
+        .arrow1:hover{
+            background-color: #526F4E;
+            color:palegoldenrod;
+            cursor: pointer;
+            transition: all ease 1s;
+        }
+        #right2{
+            height: 100vh;
+            width: 100vw;
+            background-color:#F4F4F4;
+
+        }
+        .commercial img{
+            height: 38vh;
+            width: 38vw;
+            margin-left: 2vw;
+        }
+        .residential img{
+            height: 30vh;
+            margin-top: 14.5vw;
+            margin-left: -0vw;
+            width: 29.5vw;
+            transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+            
+        }
+        .residential img:hover{
+            transform: scale(1.1) rotate(-5deg); /* Slight zoom and rotation */
+            filter: sepia(80%) contrast(120%) brightness(90%); /* Vintage effect */
+            opacity: 0.9; /* Slight fading */  
+        }
+        .kitchen img{
+            height: 30vh;
+            width: 29.5vw;
+            margin-top: 14.5vw;
+            margin-left: -0vw;
+            transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+        }
+        .kitchen img:hover{
+            transform: scale(1.1) rotate(-5deg); /* Slight zoom and rotation */
+            filter: sepia(80%) contrast(120%) brightness(90%); /* Vintage effect */
+            opacity: 0.9; /* Slight fading */  
+        }
+        .commercial h1{
+            margin-top: -15vw;
+            margin-left: 7vw;
+            font-size: 0.8em;
+        }
+        .commercial h2{
+            font-size: 0.5em;
+            margin-left: 7vw;
+        }
+        .residential h1{
+            margin-top: -13vw;
+            font-size: 0.8em;
+        }
+        .residential h2{
+            font-size: 0.5em;
+        }
+        .kitchen h1{
+            font-size: 0.8em;
+            margin-top: -13vw;
+        }
+        .kitchen h2{
+            font-size: 0.5em;
+        }
+        #custom-line1{
+            height: 0.4vh;
+            width: 24vw;
+            margin-left: -50vw;
+            margin-top: 72vw;
+        }
+        #number{
+            margin-top: 68vw;
+            margin-left: 3.5vw;
+            font-size: 0.5em;
+        }
+        #number span{
+            font-size: 2em;
+        }
+        #box-4{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        #left3{
+            height: 53vh;
+            width: 100vw;
+            background-color:#F4F4F4;
+            padding-top: 4vw;
+        }
+        #up{
+            height: 30vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+            margin-top: 0vw;
+            transition: all linear 0.2s;
+        }
+        #up:hover{
+            background-image: url(https://images.unsplash.com/photo-1619911004446-6d985c84ee64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvZmElMjBibGFjayUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+        #up img{
+            height:29.4vh;
+            width: 96vw;
+            margin-left: 2vw;
+        }
+        #down{
+            height: 23vh;
+            width: 96vw;
+            margin-top:0vw;
+            padding-top: 8vw;
+            /* padding-left: 0vw; */
+        }
+        #concept i{
+            font-size: 1.5em;
+            color: grey;
+            margin-left: 5vw;
+        }
+        #plan i{
+            font-size: 1.5em;
+            color: grey;
+            margin-left: 8vw;
+        }
+        #build i{
+            font-size: 1.5em;
+            color: grey;
+            margin-left: 11vw;
+        }
+        #design i{
+            font-size: 1.5em;
+            color: grey;
+            margin-left: 8vw;
+        }
+        #launch i{
+            font-size: 1.5em;
+            color: rgb(219, 182, 0);
+            margin-left: 8vw;
+        }
+        #concept  h1{
+            font-size: 0.8em;
+            margin-left: 4.5vw;
+        }
+        #plan h1{
+            font-size: 0.8em;
+            margin-left: 8vw;
+        }
+        #design h1{
+            font-size: 0.8em;
+            margin-left: 6vw;
+        }
+        #build h1{
+            font-size: 0.8em;
+            margin-left: 8vw;
+        }
+        #launch h1{
+            font-size: 0.8em;
+            margin-left: 5vw;
+        }
+        #line1{
+            height: 0.4vh;
+            width: 12vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: -79.2vw;
+            margin-top: 14vw;
+        }
+        #line2{
+            height: 0.4vh;
+            width: 12vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 7.8vw;
+            margin-top: 14vw;
+        }
+        #line3{
+            height: 0.4vh;
+            width: 12vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 8vw;
+            margin-top: 14vw;
+        }
+        #line4{
+            height: 0.4vh;
+            width: 12vw;
+            background-color: rgb(216, 216, 216);
+            margin-left: 7.5vw;
+            margin-top: 14vw;
+        }
+        #right3{
+            height: 100vh;
+            width: 100vw;
+            padding-left: 5vw;
+            background-color:#F4F4F4;
+            padding-top: 12vw;
+        }
+        #right3 span{
+            font-size: 1em;
+        }
+        #right3 h1{
+            font-size: 1.2em;
+            margin-top: -2vw;
+        }
+        #circle1{
+            height: 3vh;
+            width: 3vh;
+            margin-top: 7vw;
+        }
+        #num1{
+            font-size: 0.8em;
+            padding-left: 1.6vw;
+        }
+        #circle2{
+            height: 3vh;
+            width: 3vh;
+            margin-top: 6vw;
+        }
+        #num2{
+            font-size: 0.8em;
+            padding-left: 1.6vw;
+            margin-top: -5.3vw;
+        }
+        #circle3{
+            height: 3vh;
+            width: 3vh;
+            margin-top: 6vw;
+        }
+        #num3{
+            font-size: 0.8em;
+            padding-left: 1.6vw;
+            padding-top: -5.3vw;
+        }
+        #text1 h1{
+            font-size: 0.9em;
+            margin-top: -4.9vw;
+            margin-left: 9vw;
+        }
+        #text2 h1{
+            font-size: 0.9em;
+            margin-top: -4.9vw;
+            margin-left: 9vw;
+        }
+        #text3 h1{
+            font-size: 0.9em;
+            margin-top: -4.9vw;
+            margin-left: 9vw;
+        }
+        #text1 p{
+            font-size: 0.5em;
+            width: 37vw;
+            margin-left: 9vw;
+            margin-top: 1vw;
+            line-height: 2.3vw;
+        } 
+        #text2 p{
+            width: 37vw;
+            margin-left: 9vw;
+            margin-top: 1vw;
+            line-height: 2.3vw;
+            font-size: 0.5em;
+        } 
+        #text3 p{
+            width:37vw;
+            margin-left: 9vw;
+            margin-top: 1vw;
+            line-height:2.3vw;
+            font-size: 0.5em;
+        } 
+        #box-5{
+            height: 100vh;
+            width: 100vw;
+        }
+        #left5{
+            height: 100vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+            padding-top: 16vw;
+        }
+        #left5 h1{
+            font-size:1.5em;
+        }
+        #left5 h2{
+            font-size: 0.9em;
+            padding-left: 6vw;
+            font-weight: bold;
+        }
+        #img{
+            flex-direction: column;
+            overflow-y: hidden;
+            display: flex;
+            height: 100vh;
+            width: 100vw; 
+        }
+        #img img{
+            height: 60vh;
+            width: 80vw; 
+            margin-top: 20vw;
+            margin-left: -7vw;
+        }
+        #box-6{
+            height: 100vh;
+            width: 100vw; 
+            display: flex;
+            flex-direction: column;
+        }
+        #left6{
+            height: 100vh;
+            width: 100vw;
+            padding-top: 6vw;
+            padding-left: 6vw;
+            /* background-color: red; */
+        }
+        #left6 h1{
+            font-size: 1.2em;
+        }   
+        #left6 p{
+            padding-top: 3vw;
+            width: 50vw;
+            font-size: 0.6em;
+            margin-top: 0vw;
+            line-height: 3vw;
+        }
+        #left6 i{
+            font-size: 1.4em;
+        }   
+        #left6 a{
+            font-size: 0.6em;
+        }
+        #right6{
+            height: 100vh;
+            width: 100vw;
+            background-color: #F4F4F4;
+        }
+        #right6{
+            height: 50vh;
+            width: 90vw;
+            margin-left: 5vw;
+            margin-top: -30vw;
+        }
+        .comment-section {
+            width: 65vw;
+            height: 12vh;
+            padding: 1.2vw;
+            margin-left: -3vw;
+            margin-top: 57vw;
+            
+        }
+        .comment-text p{
+            font-size: 1.5em;
+            width: 60vw;
+            margin-left: 8vw;
+            padding-top: 2vw;
+            font-family: arial;
+            font-weight: 100;
+        }
+        .divider-line {
+            height: 0.1vh;
+            width: 30vw;
+            margin-top: -6vw;
+            margin-left: 18vw;
+        }
+        .play-button {
+            font-size: 3vw;
+            width: 7vw;
+            height: 4vh;
+            margin-top: -4.4vw;
+            margin-left: 48vw;
+        }
+        .comment-text span{
+            font-size: 3vw;
+            line-height: 7vw;
+            margin-left: 8vw;
+        }
+        #box-7{
+            height: 100vh;
+            width: 100vw;
+        }
+        #up-7{
+            height: 120%;
+            width: 100vw;
+            padding-top: 20vw;
+            padding-left: 3vw;
+            background-color: #F4F4F4;
+        }
+        #up-box{
+            height: 10vh;
+            width: 16vw;
+        }
+        #up-box h1{
+            font-size: 8em; 
+        }
+        #up-box h2{
+            width: 70vw;
+            margin-top: -30vw;
+            margin-left: 13vw;
+            font-size: 1.4em;
+        }
+        #arrow-7{
+            margin-top: -6vw;
+            margin-left: -8vw;
+        }
+        #arrow-left{
+            height: 7.5vw;
+            width: 8vw;
+            border: 1px solid rgb(190, 190, 190);
+        }
+        #arrow-left i{
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -1vw;
+        }
+        #arrow-right{
+            height: 7.5vw;
+            width: 8vw;
+            border: 1px solid rgb(190, 190, 190);
+            border-image: linear-gradient(to bottom, rgb(186, 186, 186) 50%, rgb(214, 200, 0) 60%)1;
+            margin-left: -4vw;
+            margin-top: -7.5vw;
+        }
+        #arrow-right{
+            font-size: 0.8em;
+            padding-left: 0.3vw;
+        }
+        #arrow-right i{
+            font-size: 1.7em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -1vw;
+            padding-left: 0.2vw;
+        }
+        #comment7{
+            height: 25vh;
+            width: 91vw;
+            margin-left:3vw;
+            margin-top: -155%;
+        }
+        #left-line7{
+            height: 10vh;
+            margin-left: 2vw;
+            margin-top: 3vw;
+        }
+        #textup7 h1{
+            font-size: 0.7em;
+            font-weight: bold;
+            width: 85vw;
+            margin-left: 4vw;
+            margin-top: -16vw;
+            line-height: 5vw;
+        }
+        #circle7{
+            height: 7vh;
+            width: 13vw;
+            margin-top: 4vw;
+        }
+        #textdown7 h1{
+            font-size: 1.2em;
+            margin-top: -11vw;
+            margin-left: 20vw;
+        }
+        #textdown7 h2{
+            font-size: 0.9em;
+            margin-top: -2vw;
+            margin-left: 20vw;
+        }
+        #comment-second7{
+            height: 25vh;
+            width: 91vw;
+            margin-left: -91vw;
+            margin-top: -105%;
+        }
+        #left2line7{
+            height: 12vh;
+            margin-left: 2vw;
+            margin-top: 2vw;
+        }
+        #text2up7 h1{
+            font-size: 0.7em;
+            width: 85vw;
+            margin-left: 4vw;
+            font-weight: bold;
+            line-height: 5vw;
+            margin-top: -20vw;
+        }
+        #circlesecond7{
+            height: 7vh;
+            width: 13vw;
+        }
+        #text2down7 h1{
+            font-size: 1.2em;
+            margin-top: -10vw;
+            margin-left: 20vw;
+        }
+        #text2down7 h2{
+            font-size: 0.9em;
+            margin-left: 20vw;
+            margin-top: -1.8vw;
+        }
+        #comment-third7{
+            height: 25vh;
+            width: 91vw;
+            margin-left: -92%;
+            margin-top: -53vw;
+            padding-top: 2vw;
+        }
+        #left3line7{
+            height: 9vh;
+            margin-top: 2vw;
+            margin-left: 2vw;
+        }
+        #text3up7 h1{
+            font-size: 0.7em;
+            font-weight: bold;
+            width: 85vw;
+            margin-left: 4vw;
+            margin-top: -15vw;
+            line-height: 4.5vw;
+        }
+        #circlethird7{
+            height: 7vh;
+            width: 13vw;
+            margin-top: 4vw;
+        }
+        #text3down7 h1{
+            font-size: 1.2em;
+            margin-top: -10vw;
+            margin-left: 20vw;
+        }
+        #text3down7 h2{
+            font-size: 0.9em;
+            margin-left: 20vw;
+            margin-top: -1.2vw;
+        }
+        #box-8{
+            height: 90vh;
+            width: 100vw;
+            margin-top: 35vw;
+            display: flex;
+            flex-direction: column;
+        }
+        #left8{
+            height: 45vh;
+            width: 100vw;
+            padding-top: 3vw;
+            padding-left: 1.2vw;
+            /* background-color: palegoldenrod; */
+        }
+        #left8 img{
+            height: 40vh;
+            width: 95vw;
+        }
+        #circle8{
+            margin-top: -20vw;
+        }
+        #circle9{
+            margin-top: -21vw;
+        }
+        #circle10{
+            margin-top: -22vw;
+        }
+        #right8{
+            height: 40vh;
+            width:100vw;
+            /* margin-top:7vw; */
+            padding-top: 4vw;
+            /* background: pink; */
+            padding-left: 17vw;
+        }
+        #right8 a{
+            font-size: 0.8em;   
+        }
+        #right8 h1{
+            font-size: 1.3em;
+            padding-top: 4vw;
+            line-height: 6vw;
+        }
+        #right8 input{
+            font-size: 0.8em;
+            height:4.5vh;
+            width: 42vw;
+            margin-top: 4vw;
+        }
+        #right8 button{
+            font-size: 0.8em;
+            height: 4.5vh;
+        }
+        #footer{
+            display: none;
+        }
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+        <div id="box-1">
+            <div id="left-1">
+                <div id="navbar">
+                    <img src="https://img.icons8.com/?size=48&id=12229&format=png"alt="">   
+                    <h1>interio.</h1>
+                </div>
+                <div id="nav-right">
+                    <h1>Home</h1>
+                    <h1>About us</h1>
+                    <h1>Explore Work</h1>
+                    <h1>Shop</h1>
+                    <h1>Contact</h1>
+                </div>
+                <div id="center1text">
+                    <h1><span>interio</span> The Modern <br> art of simplicity.</h1>
+                    <p>We are tending to the thousands of details it takes to <br> creare a custom home tailored to your lifestyle.</p>
+                    <button id="explore">Explore More <button id="arrow1"><i class="ri-arrow-right-line"></i></button></button>
+                </div>
+                <div id="pic"></div>
+            </div>
+            <div id="right-1">
+                <div id="right1text">
+                    <h1>EN <i class="ri-arrow-down-s-line"></i> <i class="ri-shopping-bag-3-line"></i></h1>
+                </div>
+                <div id="custom-box"></div>
+                <div id="imgcenter">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="">
+                </div>
+                <button id="Watch">Watch Video <button id="play"><i class="ri-play-circle-fill"></i></button></button>
+            </div>
+        </div>
+        <div id="box-2">
+            <div id="left1">
+                <div class="pic">
+                    <div class="pic1">
+                        <img src="https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <div class="pic2">
+                        <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                </div>
+                <div id="comment">
+                    <div class="comment-box">
+                        <div class="left-line"></div>
+                        <div class="comment-content">
+                          <div class="comment-text">
+                            "This interior design is stunning! The balance between modern and rustic elements creates a warm, inviting atmosphere. The use of natural light and earthy tones adds depth and makes the space feel incredibly cozy."
+                          </div>
+                          <div class="comment-image">
+                            <img src="./qu-nh-le-m-nh-dp3CS405UZM-unsplash.jpg" alt="User Image">
+                          </div>
+                          <div class="rating-stars">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                          </div>
+                          <div class="review-count">
+                            48 reviews at Yelp
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right1">
+                <h1>Award Winning <br>
+                Interior <span>Design Studio</span></h1>
+                <p>We are a resident Interior Deisgn firm located in Portiand . Our boutique studio offers more than 20 years experience in custom renovtions . new home finishesh and furnishing deign . We can help with all aspects of your project . from deisgn concepts and putting together the construction team. to sourcing furniture and art . While also tending to the thousandd of detail to the thousands of details it takes to create a custom. home tailored to your lifestyle. </p>
+                <h2>Jennie Blackpink. CEO</h2>
+                <button id="Readmore">Read more <button id="arrow"><i class="ri-arrow-right-line"></i></button></button>
+            </div>
+        </div> 
+        <div id="box-3">
+            <div id="left2">
+                <h1>700+ projects</h1>
+                <h3>all over the world</h3>
+                <p>Interio is an establishd ,high-end architecture and luxury interior design company based in portianed . Provide a complete . tailored service covering each and every aspect of your project.</p>
+                <button class="Exploremore">Explore more <button class="arrow1"><i class="ri-arrow-right-line"></i></button></button>
+            </div>
+            <div id="right2">
+                <div class="commercial">
+                    <img src="https://images.unsplash.com/photo-1585418694458-dc80a5c20294?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" alt="commercial">
+                    <h1>Commercial</h1>
+                    <h2>180 projects</h2>
+                </div>
+                <div class="residential">
+                    <img src="https://plus.unsplash.com/premium_photo-1694182513008-3517e7ebd305?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Residential">
+                    <h1>Residential</h1>
+                    <h2>250 projects</h2>
+                </div>
+                <div class="kitchen">
+                    <img src="https://images.unsplash.com/photo-1611025240428-a2c7f2563196?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8" alt="Kitchen">
+                    <h1>Kitchen</h1>
+                    <h2>140 projects</h2>
+                </div>
+                <div id="custom-line1"></div>
+                <div id="number">1 <span>2</span>3 4</div>
+            </div>
+        </div>
+        <div id="box-4">
+            <div id="left3">
+                <div id="up"></div>
+                <div id="down">
+                    <div id="concept">
+                        <div id="bulb">
+                            <i class="ri-lightbulb-line"></i>
+                        </div>
+                        <i class="ri-record-circle-fill"></i>
+                        <h1>Concept</h1>
+                    </div>
+                    <div id="plan">
+                        <div id="cut">
+                            <i class="ri-line-chart-fill"></i>
+                        </div>
+                        <i class="ri-record-circle-fill"></i>
+                        <h1>plan</h1>
+                    </div>
+                    <div id="design">
+                        <div id="pen">
+                            <i class="ri-pencil-ruler-line"></i>
+                        </div>
+                        <i class="ri-record-circle-fill"></i>
+                        <h1>Design</h1>
+                    </div>
+                    <div id="build">
+                        <div id="hammer">
+                            <i class="ri-hammer-line"></i>
+                        </div>
+                        <i class="ri-record-circle-fill"></i>
+                        <h1>Build</h1>
+                    </div>
+                    <div id="launch">
+                        <div id="check">
+                            <i class="ri-home-office-line"></i>
+                        </div>
+                        <i class="ri-checkbox-circle-fill"></i>
+                        <h1>Launch</h1>
+                    </div>
+                    <div id="line1"></div>
+                    <div id="line2"></div>
+                    <div id="line3"></div>
+                    <div id="line4"></div>
+                </div>
+            </div>
+            <div id="right3">
+                <h1><span>Our work process </span> make <br>your dream true</h1>
+                <div id="circle1">
+                    <div id="num1">1</div>
+                </div>
+                <div id="text1">
+                    <h1>Perfection in Every Inch</h1>
+                    <p>We are a residential interior design firm located in portland . Our boutique studio offers more than</p>
+                </div>
+                <div id="circle2"></div>
+                <div id="num2">2</div>
+                <div id="text2">
+                    <h1>Simple Idea & Deign</h1>
+                    <p>We are a residential interior design firm located in portland . Our boutique studio offers more than</p>
+                </div>
+                <div id="circle3">
+                    <div id="num3">3</div>
+                </div>
+                <div id="text3">
+                    <h1>Comfortable support</h1>
+                    <p>We are a residential interior design firm located in portland . Our boutique studio offers more than</p>
+                </div>
+            </div>
+        </div>
+        <div id="box-5">
+            <div id="left5">
+                <h1>Buy trending <span><br>Products</span></h1>
+                <h2>1 OF 10 </h2>
+                <div id="img">
+                    <img src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRhYmxlJTIwbGFtcHxlbnwwfHwwfHx8MA%3D%3D" alt="table lamp">
+                    <img src="https://plus.unsplash.com/premium_photo-1674197470603-8bb15efaf9e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2luZ2xlJTIwc29mYXxlbnwwfHwwfHx8MA%3D%3D" alt="sofa">
+                    <img src="https://images.unsplash.com/photo-1648809895588-c0bd7e06a61c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhbmdpbmclMjBsYW1wfGVufDB8fDB8fHww" alt="hanging lamp">
+                </div>
+            </div>
+            <div id="right5"></div>
+        </div>
+        <div id="box-6">
+            <div id="left6">
+                <h1>Take a look How <span>interio <br>Design Studio works</span></h1>
+                <p>interio's multi-award winning interior design team approach every project as a unique design journey. Carefully  considering client lifestyles preferences and personal need.</p>
+                <p>Our high-end design sevices are tailored to meet each client's need that encompass total turnkey solutions for our client's homes, delievering singular and distinctive designs which reflect our values of thoughtful design.</p>
+                <i class="ri-play-mini-fill"></i>
+                <a href="">Learn more to hire us.</a>
+            </div>
+            <div id="right6">                
+                <div class="comment-section">
+                    <div class="comment-text">
+                        <p>Interior team approach every project as a unique design journey.</p>
+                        <span>Play Video</span>
+                    </div>
+                    <div class="divider-line"></div>
+                    <div class="play-video">
+                        <button class="play-button">&#9658;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box-7">
+            <div id="up-7">
+                <div id="up-box">
+                    <h1>“</h1>
+                    <h2>What<span> Our Clients</span><br>are saying</h2>
+                    <div id="arrow-7">
+                        <div id="arrow-left"><i class="ri-arrow-left-line"></i></div>
+                        <div id="arrow-right"><i class="ri-arrow-right-line"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div id="down-7">
+                <div id="comment7">
+                    <div id="left-line7"></div>
+                    <div id="textup7"><h1>
+                        "interior studio have become the cornerstone partner  for my commercial and residential interior development firm because of that unique and talented approach. "
+                    </h1></div>
+                    <div id="circle7"></div>
+                    <div id="textdown7">
+                        <h1>Amelia Kristian</h1>
+                        <h2>Ceo at I-creative studio</h2>
+                    </div>
+                </div>
+                <div id="comment-second7">
+                    <div id="left2line7"></div>
+                    <div id="text2up7"><h1>
+                        "Their designs are brilliant, cost effective. Their team is incredibly attentive and responsive and they make every effort to ensure of completing a build out is as simple as possible."
+                    </h1></div>
+                    <div id="circlesecond7"></div>
+                    <div id="text2down7">
+                        <h1>Robin Greenchik</h1>
+                        <h2>Construction manager, VPIX</h2>
+                    </div>
+                </div>
+                <div id="comment-third7">
+                    <div id="left3line7"></div>
+                    <div id="text3up7"><h1>
+                        "It was really very smooth process work with the team of Interio. The technicians are well experienced and were able to understand my requirements thoroughly"
+                    </h1></div>
+                    <div id="circlethird7"></div>
+                    <div id="text3down7">
+                        <h1>Sara Polon</h1>
+                        <h2>Administrative, Home real state</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box-8">
+            <div id="left8"></div>
+            <div id="right8">
+                <a href="https://maps.app.goo.gl/27g9GCByjZ9WvBEg6"><i class="ri-map-pin-fill"></i>PO Box 4120, Portland, OR 97208-4120. Us</a>
+                <h1>Let's start something <br>big togather</h1>
+                <input type="text" placeholder="Enter your email address">
+                <button>Get started</button>
+                <div id="circle8"></div>
+                <div id="circle9"></div>
+                <div id="circle10"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="text-footer">
+                <div id="company">
+                    <h1>Company</h1>
+                    <h3><i class="ri-facebook-circle-fill"></i> <i class="ri-linkedin-box-fill"></i> <i class="ri-twitter-fill"></i></h3>
+                    <h2>Interio Studio. Ltd</h2>
+                    <h2>PO Box 4120, 97208-4120</h2>
+                    <h2>Portland, United States</h2>
+                </div>
+                <div id="contacts">
+                    <h1>Contacts</h1>
+                    <h2>info@interio.studio.jo</h2>
+                    <h2>(+440) 234 708 121</h2>
+                    <h2>(+440) 234 708 122</h2>
+                    <h2>(+440) 234 708 123</h2>
+                </div>
+                <div id="about">
+                    <h1>About</h1>
+                    <h2>References</h2>
+                    <h2>Service</h2>
+                    <h2>Contact</h2>
+                    <h2>Team</h2>
+                </div>
+                <div id="catelogs">
+                    <h1>Categlogs</h1>
+                    <h2>Home</h2>
+                    <h2>office</h2>
+                    <h2>Kitchen</h2>
+                    <h2>Industries</h2>
+                </div>
+            </div>
+            <div id="bottom-footer">
+                <div id="line-b">
+                    <img src="https://img.icons8.com/?size=48&id=12229&format=png"alt="">   
+                    <h1>Interio.</h1>
+                </div>
+                <div id="lineb-left">
+                    <h1>© 2020 Interio.studio</h1>
+                </div>
+            </div>
+            <div id="right-b">
+                <h1>Police</h1>
+                <h1>Cookies</h1>
+                <h1>Terms & Conditions</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
